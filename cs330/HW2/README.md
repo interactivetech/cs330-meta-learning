@@ -1,4 +1,10 @@
 ### HW2 (MAML, ProtoNet)
+
+Debugging tips:
+* I found `tf.control_dependencies([tf.print([stuff_to_print])])` helpful. 
+* Make sure variable shapes are as intended. Sometimes they are not but the 
+errors are not exposed due to undesired shape brodcasting. 
+
 #### P1: MAML
 
 ```
@@ -63,6 +69,8 @@ Meta-validation pre-inner-loop accuracy: 0.19200, meta-validation post-inner-loo
 ...
 ```
 #### P2: ProtoNet
+
+* The distance metric in the embedding space is squared L2 norm. 
 
 ```
 python run_ProtoNet.py ./omniglot_resized/
