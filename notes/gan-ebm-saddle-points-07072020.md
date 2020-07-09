@@ -1,4 +1,4 @@
-
+Adapted from John Schulman's notes.
 
 #### Energy-Based Models
 $$p(x) = \exp(-c(x))/Z_c$$
@@ -20,6 +20,3 @@ Then $$\mathcal{L}(f, q) = -\mathbb{E}_{p_\text{data}}\left[\log\sigma(f(x))\rig
 * Compared to the original GAN formulation, with min-max rather than max-min, given $$f$$, one cannot recover $$q$$ if there is no entropy regularization term. Although they both yield the same optimal value. 
 * With the choice of $$c(x)$$, $$Z_c$$ could be infinite. This can be fixed by having $$\mathcal{D}_\text{KL}(q, q_0)$$ where $$q_0$$ is Gaussian instead of $$\mathcal{H}(q)$$. 
 * $$\min_q \mathcal{L}(c, q) = \mathcal{D}_\text{JS}(p_\text{data}, q)$$. The result can be generalized to $$f$$-divergence with $$c(x) = \phi(-h(x))$$.
-
-#### GAN
-TODO: original motivation for GAN.
